@@ -1,6 +1,7 @@
 ---
 import '../styles/global.css';
 import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
 
 const pageTitle = "About my empty dendrite";
 const identity = {
@@ -27,7 +28,7 @@ const skillColor = "navy";
 				color: purple;
 				font-size: 4rem;
 			}
-			.skill {
+			.item {
 				color: var(--skillColor);
 				font-weight: bold;
 			}
@@ -35,10 +36,8 @@ const skillColor = "navy";
   </head>
   <body>
     <Navigation />
-
-    <h1>{pageTitle}</h1>
+    <h1>About page</h1>
     <h2>... Lorem ipsum dolor!</h2>
-
     <p>Here are a few facts about me:</p>
     <ul>
       <li>My name is {identity.firstName}.</li>
@@ -56,7 +55,8 @@ const skillColor = "navy";
     </ul>
     <p>My skills are:</p>
     <ul>
-      {skills.map((skill) => <li class="skill">{skill}</li>)}
+      {skills.map((skill) => <li class="item">{skill}</li>)}
     </ul>
+    <Footer />
   </body>
 </html>

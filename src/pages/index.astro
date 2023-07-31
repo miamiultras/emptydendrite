@@ -1,5 +1,10 @@
 ---
+import '../styles/global.css';
 import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+
+const pageTitle = "Empty dendrite"
+const skillColor = "navy";
 ---
 
 <html lang="en">
@@ -8,10 +13,17 @@ import Navigation from '../components/Navigation.astro';
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<title>{pageTitle}</title>
+		<style define:vars={{skillColor}}>
+			h1 {
+				color: purple;
+				font-size: 4rem;
+			}
+		</style>
 	</head>
 	<body>
 		<Navigation />
 		<h1>Empty dendrite</h1>
+		<Footer />
 	</body>
 </html>
