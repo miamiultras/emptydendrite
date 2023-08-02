@@ -1,6 +1,6 @@
 ---
 import '../styles/global.css';
-import Navigation from '../components/Navigation.astro';
+import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 
 const pageTitle = "Empty dendrite"
@@ -22,8 +22,11 @@ const skillColor = "navy";
 		</style>
 	</head>
 	<body>
-		<Navigation />
+		<Header />
 		<h1>Empty dendrite</h1>
 		<Footer />
+		<script>
+			import "../scripts/menu.js";
+		</script>
 	</body>
 </html>

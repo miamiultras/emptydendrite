@@ -1,6 +1,6 @@
 ---
 import '../styles/global.css';
-import Navigation from '../components/Navigation.astro';
+import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 
 const pageTitle = "About my empty dendrite";
@@ -35,7 +35,7 @@ const skillColor = "navy";
 		</style>
   </head>
   <body>
-    <Navigation />
+    <Header />
     <h1>About page</h1>
     <h2>... Lorem ipsum dolor!</h2>
     <p>Here are a few facts about me:</p>
@@ -58,5 +58,8 @@ const skillColor = "navy";
       {skills.map((skill) => <li class="item">{skill}</li>)}
     </ul>
     <Footer />
+    <script>
+      import "../scripts/menu.js";
+    </script>
   </body>
 </html>
