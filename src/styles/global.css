@@ -4,8 +4,12 @@ html {
 }
 
 html.dark {
-  background-color: #0d0950;
+  background-color: #090a11;
   color: #fff;
+}
+
+html.stuck {
+  overflow: hidden;
 }
 
 .dark .nav-links a {
@@ -29,59 +33,74 @@ h1 {
   font-size: 2.5rem;
 }
 
-/* nav styles */
-.hamburger {
-  padding-right: 20px;
-  cursor: pointer;
-}
-
-.hamburger .line {
-  display: block;
-  width: 40px;
-  height: 5px;
-  margin-bottom: 10px;
-  background-color: #ff9776;
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .nav-links {
-  width: 100%;
-  top: 5rem;
-  left: 48px;
-  background-color: #ff9776;
   display: none;
-  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  margin-top: 1em;
+}
+
+.nav-links.expanded {
+  display: flex;
+  flex-direction: column;
 }
 
 .nav-links a {
-  display: block;
-  text-align: center;
-  padding: 10px 0;
   text-decoration: none;
-  font-size: 1.2rem;
-  font-weight: bold;
-  text-transform: uppercase;
+  font-size: 1.5em;
+  color: inherit;
 }
 
-.nav-links a:hover, a:focus {
-  background-color: #ff9776;
+.nav-links a:hover {
+  text-decoration: underline;
 }
 
-.expanded {
-  display: unset;
+.hamburger {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.hamburger-close {
+  display: none;
+  cursor: pointer;
+}
+
+.hamburger.hidden {
+  display: none;
+}
+
+.hamburger-close.visible {
+  display: block;
+}
+
+#themeToggle.hidden {
+  display: none;
 }
 
 @media screen and (min-width: 636px) {
   .nav-links {
-    margin-left: 5em;
     display: block;
     position: static;
     width: auto;
+    height: auto;
     background: none;
+    font-size: 0.8em;
   }
 
   .nav-links a {
     display: inline-block;
-    padding: 15px 20px;
+    padding: 0 20px 10px;
+  }
+
+  .nav-links a:first-of-type {
+    padding-left: 0;
   }
 
   .hamburger {
