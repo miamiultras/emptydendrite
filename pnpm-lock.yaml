@@ -27,8 +27,8 @@ packages:
     resolution: {integrity: sha512-30iZtAPgz+LTIYoeivqYo853f02jBYSd5uGnGpkFV0M3xOt9aN73erkgYAmZU43x4VfqcnLxW9Kpg3R5LC4YYw==}
     engines: {node: '>=6.0.0'}
 
-  '@astrojs/compiler@2.12.0':
-    resolution: {integrity: sha512-7bCjW6tVDpUurQLeKBUN9tZ5kSv5qYrGmcn0sG0IwacL7isR2ZbyyA3AdZ4uxsuUFOS2SlgReTH7wkxO6zpqWA==}
+  '@astrojs/compiler@2.12.2':
+    resolution: {integrity: sha512-w2zfvhjNCkNMmMMOn5b0J8+OmUaBL1o40ipMvqcG6NRpdC+lKxmTi48DT8Xw0SzJ3AfmeFLB45zXZXtmbsjcgw==}
 
   '@astrojs/internal-helpers@0.2.1':
     resolution: {integrity: sha512-06DD2ZnItMwUnH81LBLco3tWjcZ1lGU9rLCCBaeUCGYe9cI0wKyY2W3kDyoW1I6GmcWgt1fu+D1CTvz+FIKf8A==}
@@ -105,8 +105,8 @@ packages:
     resolution: {integrity: sha512-YvjJow9FxbhFFKDSuFnVCe2WxXk1zWc22fFePVNEaWJEu8IrZVlda6N0uHwzZrUM1il7NC9Mlp4MaJYbYd9JSg==}
     engines: {node: '>=6.9.0'}
 
-  '@babel/helpers@7.27.4':
-    resolution: {integrity: sha512-Y+bO6U+I7ZKaM5G5rDUZiYfUvQPUibYmAFe7EnKdnKBbVXDZxvp+MWOH5gYciY0EPk4EScsuFMQBbEfpdRKSCQ==}
+  '@babel/helpers@7.27.6':
+    resolution: {integrity: sha512-muE8Tt8M22638HU31A3CgfSUciwz1fhATfoVai05aPXGor//CdWDCbnlY1yvBPo07njuVOCNGCSp/GTt12lIug==}
     engines: {node: '>=6.9.0'}
 
   '@babel/parser@7.27.5':
@@ -134,8 +134,8 @@ packages:
     resolution: {integrity: sha512-oNcu2QbHqts9BtOWJosOVJapWjBDSxGCpFvikNR5TGDYDQf3JwpIoMzIKrvfoti93cLfPJEG4tH9SPVeyCGgdA==}
     engines: {node: '>=6.9.0'}
 
-  '@babel/types@7.27.3':
-    resolution: {integrity: sha512-Y1GkI4ktrtvmawoSq+4FCVHNryea6uR+qUQy0AGxLSsjCX0nVmkYQMBLHDkXZuo5hGx7eYdnIaslsdBFm7zbUw==}
+  '@babel/types@7.27.6':
+    resolution: {integrity: sha512-ETyHEk2VHHvl9b9jZP5IHPavHYk57EhanlRRuae9XCpb/j5bDCbPPMOBfCWhnl/7EDJz0jEMCi/RhccCE8r1+Q==}
     engines: {node: '>=6.9.0'}
 
   '@esbuild/aix-ppc64@0.19.12':
@@ -461,8 +461,8 @@ packages:
   '@types/debug@4.1.12':
     resolution: {integrity: sha512-vIChWdVG3LG1SMxEvI/AK+FWJthlrqlTu7fbrlywTkkaONwk/UAGaULXRlf8vkzFBLVm0zkMdCquhL5aOjhXPQ==}
 
-  '@types/estree@1.0.7':
-    resolution: {integrity: sha512-w28IoSUCJpidD/TGviZwwMJckNESJZXFu7NBZ5YJ4mEUnNraUn9Pm8HSZm/jDF1pDWYKspWE7oVphigUPRakIQ==}
+  '@types/estree@1.0.8':
+    resolution: {integrity: sha512-dWHzHa2WqEXI/O1E9OjrocMTKJl2mSrEolh1Iomrv6U+JuNwaHXsXx9bLu5gG7BUWFIN0skIQJQ/L1rIex4X6w==}
 
   '@types/hast@2.3.10':
     resolution: {integrity: sha512-McWspRw8xx8J9HurkVBfYj0xKoE25tOFlHGdx4MJ5xORQrMGZNqJhVQWaIbm6Oyla5kYOXtDiopzKRJzEOkwJw==}
@@ -494,8 +494,8 @@ packages:
   '@ungap/structured-clone@1.3.0':
     resolution: {integrity: sha512-WmoN8qaIAo7WTYWbAZuG8PYEhn5fkz7dZrqTBZ7dtt//lL2Gwms1IcnQ5yHqjDfX8Ft5j4YzDM23f87zBfDe9g==}
 
-  acorn@8.14.1:
-    resolution: {integrity: sha512-OvQ/2pUDKmgfCg++xsTX1wGxfTaszcHVcTctW4UJB4hibJx2HXxxO5UmVgyjMa+ZDsiaf5wWLXYpRWMmBI0QHg==}
+  acorn@8.15.0:
+    resolution: {integrity: sha512-NZyJarBfL7nWwIq+FDL6Zp/yHEhePMNnnJ0y3qfieCrmNvYct8uvtiV41UvlSe6apAfk0fY1FbWx+NwfmpvtTg==}
     engines: {node: '>=0.4.0'}
     hasBin: true
 
@@ -613,8 +613,8 @@ packages:
     resolution: {integrity: sha512-xlx1yCK2Oc1APsPXDL2LdlNP6+uu8OCDdhOBSVT279M/S+y75O30C2VuD8T2ogdePBBl7PfPF4504tnLgX3zfw==}
     engines: {node: '>=14.16'}
 
-  caniuse-lite@1.0.30001720:
-    resolution: {integrity: sha512-Ec/2yV2nNPwb4DnTANEV99ZWwm3ZWfdlfkQbWSDDt+PsXEVYwlhPH8tdMaPunYTKKmz7AnHi2oNEi1GcmKCD8g==}
+  caniuse-lite@1.0.30001721:
+    resolution: {integrity: sha512-cOuvmUVtKrtEaoKiO0rSc29jcjwMwX5tOHDy4MgVFEWiUXj4uBMJkwI8MDySkgXidpMiHUcviogAvFi4pA2hDQ==}
 
   ccount@2.0.1:
     resolution: {integrity: sha512-eyrF0jiFpY+3drT6383f1qhkbGsLSifNAjA61IUjZjmLCWjItY6LB9ft9YhoDgwfmclB2zhu51Lc7+95b8NRAg==}
@@ -757,8 +757,8 @@ packages:
   eastasianwidth@0.2.0:
     resolution: {integrity: sha512-I88TYZWc9XiYHRQ4/3c5rjjfgkjhLyW2luGIheGERbNQ6OY7yTybanSpDXZa8y7VUP9YmDcYa+eyq4ca7iLqWA==}
 
-  electron-to-chromium@1.5.162:
-    resolution: {integrity: sha512-hQA+Zb5QQwoSaXJWEAGEw1zhk//O7qDzib05Z4qTqZfNju/FAkrm5ZInp0JbTp4Z18A6bilopdZWEYrFSsfllA==}
+  electron-to-chromium@1.5.166:
+    resolution: {integrity: sha512-QPWqHL0BglzPYyJJ1zSSmwFFL6MFXhbACOCcsCdUMCkzPdS9/OIBVxg516X/Ado2qwAq8k0nJJ7phQPCqiaFAw==}
 
   emoji-regex@10.4.0:
     resolution: {integrity: sha512-EC+0oUMY1Rqm4O6LLrgjtYDvcVYTy7chDnM4Q7030tP4Kwj3u/pR6gP9ygnp2CJMK5Gq+9Q2oqmrFJAz01DXjw==}
@@ -1888,8 +1888,8 @@ packages:
     resolution: {integrity: sha512-AyeEbWOu/TAXdxlV9wmGcR0+yh2j3vYPGOECcIj2S7MkrLyC7ne+oye2BKTItt0ii2PHk4cDy+95+LshzbXnGg==}
     engines: {node: '>=12.20'}
 
-  zod@3.25.49:
-    resolution: {integrity: sha512-JMMPMy9ZBk3XFEdbM3iL1brx4NUSejd6xr3ELrrGEfGb355gjhiAWtG3K5o+AViV/3ZfkIrCzXsZn6SbLwTR8Q==}
+  zod@3.25.56:
+    resolution: {integrity: sha512-rd6eEF3BTNvQnR2e2wwolfTmUTnp70aUTqr0oaGbHifzC3BKJsoV+Gat8vxUMR1hwOKBs6El+qWehrHbCpW6SQ==}
 
   zwitch@2.0.4:
     resolution: {integrity: sha512-bXE4cR/kVZhKZX/RjPEflHaKVhUVl85noU3v6b8apfQEc1x4A+zBxjZ4lN8LqGd6WZ3dl98pY4o717VFmoPp+A==}
@@ -1901,7 +1901,7 @@ snapshots:
       '@jridgewell/gen-mapping': 0.3.8
       '@jridgewell/trace-mapping': 0.3.25
 
-  '@astrojs/compiler@2.12.0': {}
+  '@astrojs/compiler@2.12.2': {}
 
   '@astrojs/internal-helpers@0.2.1': {}
 
@@ -1972,11 +1972,11 @@ snapshots:
       '@babel/generator': 7.27.5
       '@babel/helper-compilation-targets': 7.27.2
       '@babel/helper-module-transforms': 7.27.3(@babel/core@7.27.4)
-      '@babel/helpers': 7.27.4
+      '@babel/helpers': 7.27.6
       '@babel/parser': 7.27.5
       '@babel/template': 7.27.2
       '@babel/traverse': 7.27.4
-      '@babel/types': 7.27.3
+      '@babel/types': 7.27.6
       convert-source-map: 2.0.0
       debug: 4.4.1
       gensync: 1.0.0-beta.2
@@ -1988,14 +1988,14 @@ snapshots:
   '@babel/generator@7.27.5':
     dependencies:
       '@babel/parser': 7.27.5
-      '@babel/types': 7.27.3
+      '@babel/types': 7.27.6
       '@jridgewell/gen-mapping': 0.3.8
       '@jridgewell/trace-mapping': 0.3.25
       jsesc: 3.1.0
 
   '@babel/helper-annotate-as-pure@7.27.3':
     dependencies:
-      '@babel/types': 7.27.3
+      '@babel/types': 7.27.6
 
   '@babel/helper-compilation-targets@7.27.2':
     dependencies:
@@ -2008,7 +2008,7 @@ snapshots:
   '@babel/helper-module-imports@7.27.1':
     dependencies:
       '@babel/traverse': 7.27.4
-      '@babel/types': 7.27.3
+      '@babel/types': 7.27.6
     transitivePeerDependencies:
       - supports-color
 
@@ -2029,14 +2029,14 @@ snapshots:
 
   '@babel/helper-validator-option@7.27.1': {}
 
-  '@babel/helpers@7.27.4':
+  '@babel/helpers@7.27.6':
     dependencies:
       '@babel/template': 7.27.2
-      '@babel/types': 7.27.3
+      '@babel/types': 7.27.6
 
   '@babel/parser@7.27.5':
     dependencies:
-      '@babel/types': 7.27.3
+      '@babel/types': 7.27.6
 
   '@babel/plugin-syntax-jsx@7.27.1(@babel/core@7.27.4)':
     dependencies:
@@ -2050,7 +2050,7 @@ snapshots:
       '@babel/helper-module-imports': 7.27.1
       '@babel/helper-plugin-utils': 7.27.1
       '@babel/plugin-syntax-jsx': 7.27.1(@babel/core@7.27.4)
-      '@babel/types': 7.27.3
+      '@babel/types': 7.27.6
     transitivePeerDependencies:
       - supports-color
 
@@ -2058,7 +2058,7 @@ snapshots:
     dependencies:
       '@babel/code-frame': 7.27.1
       '@babel/parser': 7.27.5
-      '@babel/types': 7.27.3
+      '@babel/types': 7.27.6
 
   '@babel/traverse@7.27.4':
     dependencies:
@@ -2066,13 +2066,13 @@ snapshots:
       '@babel/generator': 7.27.5
       '@babel/parser': 7.27.5
       '@babel/template': 7.27.2
-      '@babel/types': 7.27.3
+      '@babel/types': 7.27.6
       debug: 4.4.1
       globals: 11.12.0
     transitivePeerDependencies:
       - supports-color
 
-  '@babel/types@7.27.3':
+  '@babel/types@7.27.6':
     dependencies:
       '@babel/helper-string-parser': 7.27.1
       '@babel/helper-validator-identifier': 7.27.1
@@ -2251,29 +2251,29 @@ snapshots:
   '@types/babel__core@7.20.5':
     dependencies:
       '@babel/parser': 7.27.5
-      '@babel/types': 7.27.3
+      '@babel/types': 7.27.6
       '@types/babel__generator': 7.27.0
       '@types/babel__template': 7.4.4
       '@types/babel__traverse': 7.20.7
 
   '@types/babel__generator@7.27.0':
     dependencies:
-      '@babel/types': 7.27.3
+      '@babel/types': 7.27.6
 
   '@types/babel__template@7.4.4':
     dependencies:
       '@babel/parser': 7.27.5
-      '@babel/types': 7.27.3
+      '@babel/types': 7.27.6
 
   '@types/babel__traverse@7.20.7':
     dependencies:
-      '@babel/types': 7.27.3
+      '@babel/types': 7.27.6
 
   '@types/debug@4.1.12':
     dependencies:
       '@types/ms': 2.1.0
 
-  '@types/estree@1.0.7': {}
+  '@types/estree@1.0.8': {}
 
   '@types/hast@2.3.10':
     dependencies:
@@ -2305,7 +2305,7 @@ snapshots:
 
   '@ungap/structured-clone@1.3.0': {}
 
-  acorn@8.14.1: {}
+  acorn@8.15.0: {}
 
   ansi-align@3.0.1:
     dependencies:
@@ -2332,7 +2332,7 @@ snapshots:
 
   astro@3.6.5:
     dependencies:
-      '@astrojs/compiler': 2.12.0
+      '@astrojs/compiler': 2.12.2
       '@astrojs/internal-helpers': 0.2.1
       '@astrojs/markdown-remark': 3.5.0(astro@3.6.5)
       '@astrojs/telemetry': 3.0.4
@@ -2341,9 +2341,9 @@ snapshots:
       '@babel/parser': 7.27.5
       '@babel/plugin-transform-react-jsx': 7.27.1(@babel/core@7.27.4)
       '@babel/traverse': 7.27.4
-      '@babel/types': 7.27.3
+      '@babel/types': 7.27.6
       '@types/babel__core': 7.20.5
-      acorn: 8.14.1
+      acorn: 8.15.0
       boxen: 7.1.1
       chokidar: 3.6.0
       ci-info: 3.9.0
@@ -2389,7 +2389,7 @@ snapshots:
       vitefu: 0.2.5(vite@4.5.14)
       which-pm: 2.2.0
       yargs-parser: 21.1.1
-      zod: 3.25.49
+      zod: 3.25.56
     optionalDependencies:
       sharp: 0.32.6
     transitivePeerDependencies:
@@ -2482,8 +2482,8 @@ snapshots:
 
   browserslist@4.25.0:
     dependencies:
-      caniuse-lite: 1.0.30001720
-      electron-to-chromium: 1.5.162
+      caniuse-lite: 1.0.30001721
+      electron-to-chromium: 1.5.166
       node-releases: 2.0.19
       update-browserslist-db: 1.1.3(browserslist@4.25.0)
 
@@ -2500,7 +2500,7 @@ snapshots:
 
   camelcase@7.0.1: {}
 
-  caniuse-lite@1.0.30001720: {}
+  caniuse-lite@1.0.30001721: {}
 
   ccount@2.0.1: {}
 
@@ -2618,7 +2618,7 @@ snapshots:
 
   eastasianwidth@0.2.0: {}
 
-  electron-to-chromium@1.5.162: {}
+  electron-to-chromium@1.5.166: {}
 
   emoji-regex@10.4.0: {}
 
@@ -2692,7 +2692,7 @@ snapshots:
 
   estree-walker@3.0.3:
     dependencies:
-      '@types/estree': 1.0.7
+      '@types/estree': 1.0.8
 
   eventemitter3@5.0.1: {}
 
@@ -4057,6 +4057,6 @@ snapshots:
 
   yocto-queue@1.2.1: {}
 
-  zod@3.25.49: {}
+  zod@3.25.56: {}
 
   zwitch@2.0.4: {}
