@@ -1,12 +1,13 @@
 ---
 import Hamburger from "./Hamburger.astro";
+import NavigationLink from "./NavigationLink.astro";
 ---
 <nav>
   <Hamburger />
   <div class="nav-links">
-    <a href="/">Home</a>
-    <a href="/about">About</a>
-    <a href="/blog">Blog</a>
-    <a href="/tags/">Tags</a>
+    <NavigationLink href="/">Home</NavigationLink>
+    <NavigationLink href="/about">About</NavigationLink>
+    <NavigationLink href="/blog">Blog</NavigationLink>
+    <NavigationLink href="/tags">Tags</NavigationLink>
   </div>
 </nav>
