@@ -6,9 +6,11 @@ const pageTitle = "Gallery Viewer";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-  <section transition:name="gallery-main">
-    <Viewer client:load />
-  </section>
+  <div class="gallery-root">
+    <section class="panel" transition:name="gallery-main">
+      <Viewer client:load />
+    </section>
+  </div>
 </BaseLayout>
 
 
