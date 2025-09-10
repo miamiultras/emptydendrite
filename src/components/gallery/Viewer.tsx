@@ -23,9 +23,17 @@ export default function Viewer() {
     return Array.from(map.entries());
   }, [gallery]);
 
+  // Apply gallery theme to the document (so global dark styles take effect)
+  useEffect(() => {
+    if (!gallery) return;
+    const root = document.documentElement;
+    if (gallery.theme === 'dark') root.classList.add('dark');
+    else root.classList.remove('dark');
+  }, [gallery]);
+
   if (!gallery) {
     return (
-      <div style={{ display: 'grid', gap: '0.75rem' }}>
+      <div class="stack-2">
         <div>No gallery data in URL.</div>
         <div>
           Open via a link like <code>/gallery/viewer#&lt;base64-json&gt;</code> generated in the editor.
@@ -35,25 +43,17 @@ export default function Viewer() {
     );
   }
 
-  const dark = gallery.theme === 'dark';
-
   return (
-    <div style={{ display: 'grid', gap: '1rem', color: dark ? '#eaeaea' : 'inherit' }}>
-      <h2 style={{ margin: 0 }}>{gallery.name}</h2>
+    <div class="stack-1">
+      <h2 class="gallery-title">{gallery.name}</h2>
       {grouped.map(([room, items]) => (
-        <section
-          style={{ border: '1px solid var(--color-border, #ddd)', padding: '0.75rem', borderRadius: 8, background: dark ? '#111' : '#fff' }}
-        >
-          <div style={{ fontWeight: 600, marginBottom: '0.5rem' }}>{room}</div>
-          <div style={{ display: 'grid', gap: '0.75rem', gridTemplateColumns: 'repeat(auto-fill, minmax(220px, 1fr))' }}>
+        <section class="panel">
+          <div class="section-title">{room}</div>
+          <div class="grid-thumbs">
             {items.map((a) => (
-              <figure style={{ margin: 0 }}>
-                <img
-                  src={a.url}
-                  alt={a.title}
-                  style={{ width: '100%', height: 260, objectFit: 'cover', borderRadius: 8, border: '1px solid #e6e6e6' }}
-                />
-                <figcaption style={{ marginTop: 6, fontSize: 13, opacity: 0.9 }}>{a.title}</figcaption>
+              <figure class="art-card">
+                <img loading="lazy" src={a.url} alt={a.title} class="art-image" />
+                <figcaption class="art-caption">{a.title}</figcaption>
               </figure>
             ))}
           </div>
