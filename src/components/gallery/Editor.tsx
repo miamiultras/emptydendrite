@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState } from 'preact/hooks';
+import type { JSX } from 'preact';
 import type { Artwork, Gallery } from './model';
 import { clearDraft, generateId, loadDraft, saveDraft, galleryToHash } from './model';
 
@@ -10,6 +11,33 @@ export default function Editor() {
   const [artworks, setArtworks] = useState<Artwork[]>([]);
   const [newArtwork, setNewArtwork] = useState<NewArtwork>({ title: '', url: '', room: '' });
   const [shareLink, setShareLink] = useState<string>('');
+
+  const onNameInput = (e: JSX.TargetedEvent<HTMLInputElement, Event>) => {
+    setName(e.currentTarget.value);
+  };
+
+  const onThemeChange = (e: JSX.TargetedEvent<HTMLSelectElement, Event>) => {
+    setTheme((e.currentTarget.value as 'light' | 'dark'));
+  };
+
+  const onUrlInput = (e: JSX.TargetedEvent<HTMLInputElement, Event>) => {
+    const value = e.currentTarget.value;
+    setNewArtwork(s => ({ ...s, url: value }));
+  };
+
+  const onTitleInput = (e: JSX.TargetedEvent<HTMLInputElement, Event>) => {
+    const value = e.currentTarget.value;
+    setNewArtwork(s => ({ ...s, title: value }));
+  };
+
+  const onRoomInput = (e: JSX.TargetedEvent<HTMLInputElement, Event>) => {
+    const value = e.currentTarget.value;
+    setNewArtwork(s => ({ ...s, room: value }));
+  };
+
+  const onShareFocus = (e: JSX.TargetedEvent<HTMLInputElement, FocusEvent>) => {
+    e.currentTarget.select();
+  };
 
   useEffect(() => {
     const draft = loadDraft();
@@ -71,44 +99,44 @@ export default function Editor() {
   }
 
   return (
-    <div style={{ display: 'grid', gap: '1rem' }}>
-      <section style={{ display: 'grid', gap: '0.5rem' }}>
+    <div class="stack-1">
+      <section class="panel stack-2">
         <label>
           <div>Name</div>
-          <input value={name} onInput={(e: any) => setName(e.currentTarget.value)} />
+          <input class="input-text" value={name} onInput={onNameInput} />
         </label>
         <label>
           <div>Theme</div>
-          <select value={theme} onChange={(e: any) => setTheme(e.currentTarget.value)}>
+          <select class="select" value={theme} onChange={onThemeChange}>
             <option value="light">light</option>
             <option value="dark">dark</option>
           </select>
         </label>
       </section>
 
-      <section style={{ display: 'grid', gap: '0.5rem' }}>
-        <div style={{ fontWeight: 600 }}>Add artwork</div>
-        <input placeholder="Image URL" value={newArtwork.url} onInput={(e: any) => setNewArtwork(s => ({ ...s, url: e.currentTarget.value }))} />
-        <input placeholder="Title (optional)" value={newArtwork.title} onInput={(e: any) => setNewArtwork(s => ({ ...s, title: e.currentTarget.value }))} />
-        <input placeholder='Room (optional, e.g. "Room A")' value={newArtwork.room} onInput={(e: any) => setNewArtwork(s => ({ ...s, room: e.currentTarget.value }))} />
-        <button onClick={addArtwork}>Add</button>
+      <section class="panel stack-2">
+        <div class="section-title">Add artwork</div>
+        <input class="input-text" placeholder="Image URL" value={newArtwork.url} onInput={onUrlInput} />
+        <input class="input-text" placeholder="Title (optional)" value={newArtwork.title} onInput={onTitleInput} />
+        <input class="input-text" placeholder='Room (optional, e.g. "Room A")' value={newArtwork.room} onInput={onRoomInput} />
+        <button class="btn" onClick={addArtwork}>Add</button>
       </section>
 
-      <section style={{ display: 'grid', gap: '0.5rem' }}>
-        <div style={{ fontWeight: 600 }}>Preview</div>
+      <section class="panel stack-2">
+        <div class="section-title">Preview</div>
         {grouped.length === 0 ? (
           <div>No artworks yet.</div>
         ) : (
           grouped.map(([room, items]) => (
-            <div style={{ border: '1px solid var(--color-border, #ddd)', padding: '0.75rem', borderRadius: '8px' }}>
-              <div style={{ fontWeight: 600, marginBottom: '0.5rem' }}>{room}</div>
-              <div style={{ display: 'grid', gap: '0.75rem', gridTemplateColumns: 'repeat(auto-fill, minmax(160px, 1fr))' }}>
+            <div class="panel stack-2">
+              <div class="section-title">{room}</div>
+              <div class="grid-thumbs">
                 {items.map(a => (
-                  <figure style={{ margin: 0 }}>
-                    <img src={a.url} alt={a.title} style={{ width: '100%', height: 140, objectFit: 'cover', borderRadius: 6, border: '1px solid #e6e6e6' }} />
-                    <figcaption style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: 6, fontSize: 12 }}>
+                  <figure class="art-card">
+                    <img loading="lazy" src={a.url} alt={a.title} class="art-image" />
+                    <figcaption class="art-caption">
                       <span title={a.title}>{a.title}</span>
-                      <button onClick={() => removeArtwork(a.id)} style={{ fontSize: 12 }}>Remove</button>
+                      <button class="btn btn--sm" onClick={() => removeArtwork(a.id)}>Remove</button>
                     </figcaption>
                   </figure>
                 ))}
@@ -118,13 +146,13 @@ export default function Editor() {
         )}
       </section>
 
-      <section style={{ display: 'grid', gap: '0.5rem' }}>
-        <div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap' }}>
-          <button onClick={generateLink}>Generate share link</button>
-          <button onClick={openViewer}>Open viewer</button>
-          <button onClick={resetDraft}>Clear draft</button>
+      <section class="panel stack-2">
+        <div class="btn-row">
+          <button class="btn" onClick={generateLink}>Generate share link</button>
+          <button class="btn" onClick={openViewer}>Open viewer</button>
+          <button class="btn" onClick={resetDraft}>Clear draft</button>
         </div>
-        <input readOnly placeholder="Share link will appear here" value={shareLink} onFocus={(e: any) => e.currentTarget.select()} />
+        <input class="input-text" readOnly placeholder="Share link will appear here" value={shareLink} onFocus={onShareFocus} />
       </section>
     </div>
   );
